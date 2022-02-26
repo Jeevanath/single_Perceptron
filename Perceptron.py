@@ -31,7 +31,7 @@ z = [1,1,0,0,1,0,1,0,0,0]
 
 
 class Perceptron(object):
-	def __init__(self, no_of_inputs, threshold=100, learning_rate=0.01):
+	def __init__(self, no_of_inputs, threshold=1000, learning_rate=0.001):
 		self.threshold = threshold
 		self.learning_rate = learning_rate
 		self.weights = np.zeros(no_of_inputs + 1)
@@ -88,6 +88,9 @@ for i in range(100):
                c=colours[ans[i]])
 plt.plot()
 plt.plot(x,w)
+plt.xlabel("X axis")
+plt.ylabel("Y axis")
+plt.title("Single Layer Perceptron for Linear classification")
 plt.show()
 
 
